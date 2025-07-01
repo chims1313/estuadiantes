@@ -1,12 +1,10 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color-scheme: light;
+  color: #222;
+  background: #f5f7fa;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,45 +22,135 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: #f5f7fa;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  margin: 2rem auto 1rem auto;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background: #2563eb;
+  color: #fff;
+  margin-top: 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0001;
 }
 button:hover {
-  border-color: #646cff;
+  background: #1746b0;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px #0001;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 420px;
+}
+
+.card:last-child {
+  max-width: 700px;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  margin-top: 1rem;
+}
+
+input {
+  background: #fff;
+  color: #222;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+button.edit {
+  background: #facc15;
+  color: #222;
+  margin-top: 0;
+}
+
+button.edit:hover {
+  background: #eab308;
+}
+
+button.delete {
+  background: #ef4444;
+  color: #fff;
+  margin-top: 0;
+}
+
+button.delete:hover {
+  background: #b91c1c;
+}
+
+.badge {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .card, .card:last-child {
+    max-width: 95vw;
+    padding: 1rem;
   }
-  a:hover {
-    color: #747bff;
+  h1 {
+    font-size: 1.5em;
+    padding: 0.5em 0.5em;
   }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.card, .card * {
+  color: #222 !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, label, p {
+  color: #222 !important;
 }
